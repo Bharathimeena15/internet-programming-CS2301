@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Personal Expense Calculator</h1>
+
+    <!-- Income -->
+    <div class="card">
+        <h2>Income Details</h2>
+
+        <label>Monthly Income</label>
+        <input type="number" id="income" placeholder="Enter your income">
+
+        <button onclick="calculateExpenses()">Calculate</button>
+    </div>
+
+    <!-- Expense -->
+    <div class="card">
+        <h2>Add Expense</h2>
+
+        <label>Expense Name</label>
+        <input type="text" id="expenseName" placeholder="Example: Food">
+
+        <label>Amount</label>
+        <input type="number" id="expenseAmount" placeholder="Enter amount">
+
+        <label>Category</label>
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Education">Education</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <!-- Expense List -->
+    <div class="card">
+        <h2>Expense Details</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Expense</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+
+            <tbody id="expenseTable">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+        <h2>Summary Report</h2>
+
+        <p>Total Income: ₹<span id="totalIncome">0</span></p>
+
+        <p>Total Expenses: ₹<span id="totalExpense">0</span></p>
+
+        <p>Savings: ₹<span id="savings">0</span></p>
+
+        <h3>Expense Categories</h3>
+
+        <p>Food: ₹<span id="food">0</span></p>
+        <p>Travel: ₹<span id="travel">0</span></p>
+        <p>Education: ₹<span id="education">0</span></p>
+        <p>Shopping: ₹<span id="shopping">0</span></p>
+        <p>Bills: ₹<span id="bills">0</span></p>
+        <p>Entertainment: ₹<span id="entertainment">0</span></p>
+        <p>Other: ₹<span id="other">0</span></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

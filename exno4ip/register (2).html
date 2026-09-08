@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Register Validation</title>
+</head>
+
+<body>
+
+<h2>Create Account</h2>
+
+<form onsubmit="return validateForm()">
+
+    <label>Full Name:</label>
+    <input type="text" id="fullname">
+    <br>
+    <span id="nameError" style="color:red;"></span>
+    <br><br>
+
+    <label>Email:</label>
+    <input type="text" id="email">
+    <br>
+    <span id="emailError" style="color:red;"></span>
+    <br><br>
+
+    <label>Contact Number:</label>
+    <input type="text" id="contact">
+    <br>
+    <span id="contactError" style="color:red;"></span>
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <br>
+    <span id="passwordError" style="color:red;"></span>
+    <br><br>
+
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword">
+    <br>
+    <span id="confirmError" style="color:red;"></span>
+    <br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+
+</form>
+
+<script>
+
+    function validateForm() {
+
+        // Get input values
+        let name = document.getElementById("fullname").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let contact = document.getElementById("contact").value.trim();
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
+
+        // Clear previous errors
+        document.getElementById("nameError").innerHTML = "";
+        document.getElementById("emailError").innerHTML = "";
+        document.getElementById("contactError").innerHTML = "";
+        document.getElementById("passwordError").innerHTML = "";
+        document.getElementById("confirmError").innerHTML = "";
+
+        let valid = true;
+
+        // Name validation
+        if (name === "") {
+            document.getElementById("nameError").innerHTML =
+                "Name is required";
+            valid = false;
+        }
+        else if (!/^[A-Za-z ]+$/.test(name)) {
+            document.getElementById("nameError").innerHTML =
+                "Name should contain only letters";
+            valid = false;
+        }
+
+        // Email validation
+        if (email === "") {
+            document.getElementById("emailError").innerHTML =
+                "Email is required";
+            valid = false;
+        }
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById("emailError").innerHTML =
+                "Enter a valid email";
+            valid = false;
+        }
+
+        // Contact validation
+        if (contact === "") {
+            document.getElementById("contactError").innerHTML =
+                "Contact number is required";
+            valid = false;
+        }
+        else if (!/^[0-9]{10}$/.test(contact)) {
+            document.getElementById("contactError").innerHTML =
+                "Contact number must contain 10 digits";
+            valid = false;
+        }
+
+        // Password validation
+        if (password === "") {
+            document.getElementById("passwordError").innerHTML =
+                "Password is required";
+            valid = false;
+        }
+        else if (password.length < 8) {
+            document.getElementById("passwordError").innerHTML =
+                "Password must contain at least 8 characters";
+            valid = false;
+        }
+
+        // Confirm password validation
+        if (confirmPassword === "") {
+            document.getElementById("confirmError").innerHTML =
+                "Please confirm your password";
+            valid = false;
+        }
+        else if (password !== confirmPassword) {
+            document.getElementById("confirmError").innerHTML =
+                "Passwords do not match";
+            valid = false;
+        }
+
+        // Registration successful
+        if (valid) {
+            alert("Registration Successful!");
+            return true;
+        }
+
+        return false;
+    }
+
+</script>
+
+
+</body>
+</html>

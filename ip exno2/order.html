@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Order Page</title>
+</head>
+<body bgcolor="lightgreen">
+<center>
+<h1>Place Order</h1>
+</center>
+<h2>Order Details</h2>
+<table>
+<tr bgcolor="lightpink">
+    <th>Product</th>
+    <th>Price</th>
+    <th>Delivery Timings</th>
+</tr>
+<tr>
+  <b> <td>Mobile</td></b>
+    <td>₹20,000</td>
+    <td>3-7 Days</td>
+</tr>
+<tr>
+    <b><td>Laptop</td></b>
+    <td>₹60,000</td>
+    <td>5-7 Days</td>
+</tr>
+<tr>
+    <b><td>Headphones</td></b>
+    <td>₹2,000</td>
+    <td>2-3 Days</td></tr>
+</table>
+<h2>Customer Order Form</h2>
+<form>
+Name:
+<br>
+<input type="text" placeholder="Enter your name here" required>
+<br><br>
+Email:
+<br>
+<input type="email" placeholder="Enter email" required>
+<br><br>
+Phone Number:
+<br>
+<input type="phone" placeholder="Enter phone number">
+<br><br>
+Address:
+<br>
+<textarea rows="4" cols="30"></textarea>
+<br><br>
+Select Product:
+<br>
+<select>
+<option>Mobile</option>
+<option>Laptop</option>
+<option>Headphones</option>
+<option>Smart Watch</option>
+</select>
+
+
+<br><br>
+Quantity:
+<br>
+<input type="number" min="1" max="10">
+<br><br>
+Delivery Date:
+<br>
+<input type="date">
+<br><br>
+Preferred Delivery Time:
+<br>
+<input type="time">
+Payment Method:
+<br>
+<input type="radio" name="payment">
+Cash on Delivery
+<input type="radio" name="payment">
+UPI
+<input type="radio" name="payment">
+Card
+Upload Payment Screenshot:
+<br>
+<input type="file">
+<br><br>
+<input type="submit" value="Place Order">
+<input type="reset" value="Clear">
+</form>
+<center>
+<h4>Thank You For Shopping!!!</h4>
+</center>
+</body>
+</html>
