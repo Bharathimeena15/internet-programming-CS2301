@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<products>
+
+    <product>
+        <id>101</id>
+        <name>Laptop</name>
+        <category>Electronics</category>
+        <price>55000</price>
+        <stock>10</stock>
+    </product>
+
+    <product>
+        <id>102</id>
+        <name>Smart Phone</name>
+        <category>Electronics</category>
+        <price>25000</price>
+        <stock>15</stock>
+    </product>
+
+    <product>
+        <id>103</id>
+        <name>Headphones</name>
+        <category>Accessories</category>
+        <price>1500</price>
+        <stock>25</stock>
+    </product>
+
+    <product>
+        <id>104</id>
+        <name>Smart Watch</name>
+        <category>Accessories</category>
+        <price>3500</price>
+        <stock>20</stock>
+    </product>
+
+    <product>
+        <id>105</id>
+        <name>Bluetooth Speaker</name>
+        <category>Electronics</category>
+        <price>2200</price>
+        <stock>12</stock>
+    </product>
+
+</products>
