@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Member Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            width: 420px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 25px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Member Registration</h1>
+
+        <p class="subtitle">
+            Enter your details to create an account
+        </p>
+
+        <form method="POST" action="validate.php">
+
+            <label>Email Address</label>
+            <input type="text" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <label>Credit Card Number</label>
+            <input type="text" name="ccnumber" required>
+
+            <label>Phone Number</label>
+            <input type="text" name="phone" required>
+
+            <input type="submit" value="Create Account">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

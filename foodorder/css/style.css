@@ -1,0 +1,203 @@
+/* ============================================================
+   Spice Route Restaurant - Stylesheet
+============================================================ */
+:root {
+    --primary: #d94f30;
+    --primary-dark: #b53d22;
+    --dark: #2b2119;
+    --cream: #fff8f0;
+    --gray: #6b6259;
+    --border: #e8ddd0;
+    --success: #2e7d32;
+    --danger: #c62828;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: var(--dark);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+}
+.logo { font-size: 1.4rem; font-weight: bold; color: #ffcf99; }
+.nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.nav-links a { padding: 6px 4px; border-bottom: 2px solid transparent; transition: 0.2s; }
+.nav-links a:hover { border-bottom: 2px solid var(--primary); color: var(--primary); }
+
+/* ---------- Flash messages ---------- */
+.flash-message {
+    max-width: 1100px;
+    margin: 14px auto 0;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+.flash-message.success { background: #e2f5e4; color: var(--success); border: 1px solid #b7e2ba; }
+.flash-message.error { background: #fbe3e1; color: var(--danger); border: 1px solid #f0b8b4; }
+.flash-message.info { background: #e3edfb; color: #1a4c8b; border: 1px solid #b8d3f0; }
+
+/* ---------- Layout ---------- */
+.page-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+    min-height: 60vh;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    padding: 60px 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.hero h1 { font-size: 2.3rem; margin-bottom: 12px; }
+.hero p { font-size: 1.1rem; margin-bottom: 24px; opacity: 0.95; }
+.btn {
+    display: inline-block;
+    background: var(--dark);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+.btn:hover { background: #443426; }
+.btn-primary { background: var(--primary); }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-small { padding: 6px 14px; font-size: 0.85rem; }
+.btn-danger { background: var(--danger); }
+.btn-danger:hover { background: #a51f1f; }
+
+/* ---------- Section titles ---------- */
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary);
+    padding-left: 12px;
+}
+
+/* ---------- Category filter ---------- */
+.category-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 26px; }
+.category-filter a {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: #fff;
+    font-size: 0.9rem;
+}
+.category-filter a.active, .category-filter a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+/* ---------- Menu grid ---------- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 22px;
+}
+.menu-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.menu-card:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,0,0,0.08); }
+.menu-card-img {
+    height: 150px;
+    background: #f1e6d8 center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+.menu-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+.menu-card-body h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.menu-card-body p { font-size: 0.88rem; color: var(--gray); flex: 1; margin-bottom: 10px; }
+.menu-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+.price { font-weight: bold; color: var(--primary-dark); font-size: 1.05rem; }
+
+/* ---------- Forms ---------- */
+.form-card {
+    background: #fff;
+    max-width: 460px;
+    margin: 20px auto;
+    padding: 32px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+.form-card h2 { margin-bottom: 20px; text-align: center; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; margin-bottom: 6px; font-weight: 500; font-size: 0.92rem; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+.form-error { color: var(--danger); font-size: 0.82rem; margin-top: 4px; }
+.form-footer-text { text-align: center; margin-top: 14px; font-size: 0.9rem; }
+
+/* ---------- Cart / table ---------- */
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { padding: 12px 14px; border-bottom: 1px solid var(--border); text-align: left; font-size: 0.92rem; }
+th { background: #f6ede2; }
+.qty-input { width: 60px; padding: 6px; text-align: center; border: 1px solid var(--border); border-radius: 4px; }
+.cart-summary { max-width: 320px; margin-left: auto; margin-top: 20px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+.cart-summary .row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.cart-summary .total { font-weight: bold; font-size: 1.1rem; border-top: 1px solid var(--border); padding-top: 8px; }
+
+/* ---------- Status badges ---------- */
+.badge { padding: 4px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+.badge.Pending, .badge.Confirmed { background: #fff3cd; color: #8a6d1c; }
+.badge.Preparing, .badge.Out-for-Delivery { background: #d9e8fb; color: #1a4c8b; }
+.badge.Delivered { background: #d8f0da; color: var(--success); }
+.badge.Cancelled { background: #fbe1de; color: var(--danger); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background: var(--dark);
+    color: #d8cfc4;
+    text-align: center;
+    padding: 18px;
+    font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+    .nav-container { flex-direction: column; gap: 10px; align-items: flex-start; }
+    .hero h1 { font-size: 1.7rem; }
+}
